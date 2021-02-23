@@ -98,7 +98,14 @@ Para registrar un dispositivo, primero debe crear una aplicación para alojarlo.
 
 Complete cualquier identificación y descripción que desee. La aplicación EUI se generará automáticamente al crear la aplicación. También puede elegir su controlador  para la aplicación (por ejemplo meshed-handler).
 
+![image](https://user-images.githubusercontent.com/72763026/108861282-cf347880-75cd-11eb-9ada-70f73d6daaa8.png)
+
+
+
+
 Una vez agregada la aplicación debería verla en la descripción general .
+
+
 
 Crear y configurar un dispositivo
 --
