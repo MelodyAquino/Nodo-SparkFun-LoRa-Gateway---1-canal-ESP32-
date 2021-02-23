@@ -107,6 +107,10 @@ Complete cualquier identificación y descripción que desee. La aplicación EUI 
 
 Una vez agregada la aplicación debería verla en la descripción general .
 
+![image](https://user-images.githubusercontent.com/72763026/108862771-4fa7a900-75cf-11eb-98d0-76108480216e.png)
+
+
+
 
 
 Crear y configurar un dispositivo
