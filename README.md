@@ -125,6 +125,9 @@ Este boceto de ejemplo solo admite la activación de ABP , por lo que deberá mo
 
 Guarde la configuración y vuelva a la página " Descripción general del dispositivo ". Debería ver claves nuevas, incluidas " Clave de sesión de red ", " Clave de sesión de la aplicación " y " Dirección del dispositivo ". 
 
+![image](https://user-images.githubusercontent.com/72763026/108863341-df4d5780-75cf-11eb-8bf6-bb5ef61193c4.png)
+
+
 Actualizar el código de ejemplo-
 -
 Con su aplicación, sesión de red y claves de dispositivo en la mano ya puede terminar de configurar el boceto del dispositivo ESP32 LoRa y comenzar a publicar datos. 
