@@ -21,9 +21,8 @@ NOTA: La Secretaría de modernización de Argentina [https://www.argentina.gob.a
 A continuación se muestra el archivo de configuración: 
 // project-specific definitions
 //#define CFG_eu868 1
-//#define CFG_us915 1
-//#define CFG_au921 1   
-#define CFG_au915 1 
+//#define CFG_us915 1   
+#define CFG_au921  1
  
 //#define CFG_as923 1
 // #define LMIC_COUNTRY_CODE LMIC_COUNTRY_CODE_JP   /* for as923-JP */
@@ -52,17 +51,12 @@ const lmic_pinmap lmic_pins = {
   .rst = 5,
   .dio = {26, 33, 32},
 };
-También se han modificado los canales habilitados para usar solo un canal con las líneas siguientes : 
+Se ha seleccionado la subbanda  2
 
-
-// First disable all sub-bands
-for (int b = 0; b < 8; ++b) {
-  LMIC_disableSubBand(b);
-}
-// Then enable the channel(s) you want to use
-LMIC_enableChannel(8); // 903.9 MHz
-
-
+#elif defined(CFG_au921) // para usar con AU915MHZ
+  Serial.println(F("Loading AU915 Configuration..."));
+  LMIC_selectSubBand(1); // Set to AU915 sub-band 2
+  
 
 No puede compilar correctamente hasta que complete estas líneas:
  
@@ -190,10 +184,7 @@ Puede utilizar el servidor web de la puerta de enlace para ajustar esta configur
 Tenga en cuenta que los números de canal deben coincidir secuencialmente con la freqsmatriz en loraModem.h , por ejemplo, el canal 0 debe ser 903.9MHz (nuevamente, asumiendo frecuencias estadounidenses).
 
 Si los mensajes llegan a su puerta de enlace, pero no aparecen en la consola de su dispositivo TTN, considere cambiar la _TTNSERVERvariable en " ESP-sc-gway.h ". 
-Hay que corroborar si funiona con :  au915.thethings.meshed.com.au 
- 
-"router.eu.thethings.network"ha funcionado perfectamente (incluso en los EE. UU.).
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+utilizando  "router.au.thethings.network". 
 
 
 
