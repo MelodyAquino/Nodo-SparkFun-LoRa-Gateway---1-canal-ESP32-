@@ -45,17 +45,17 @@ Luego abra ESP-1CH-TTN-Device-ABP.ino :
 
 Entre las modificaciones en este ejemplo se encuentran el mapa de pines entre la radio y ESP32, configurado con estas líneas:
 
-const lmic_pinmap lmic_pins = {
-  .nss = 16,
-  .rxtx = LMIC_UNUSED_PIN,
-  .rst = 5,
-  .dio = {26, 33, 32},
-};
+  const lmic_pinmap lmic_pins = {
+    .nss = 16,
+    .rxtx = LMIC_UNUSED_PIN,
+    .rst = 5,
+    .dio = {26, 33, 32},
+  };
 Se ha seleccionado la subbanda  2
 
-#elif defined(CFG_au921) // para usar con AU915MHZ
-  Serial.println(F("Loading AU915 Configuration..."));
-  LMIC_selectSubBand(1); // Set to AU915 sub-band 2
+  #elif defined(CFG_au921) // para usar con AU915MHZ
+    Serial.println(F("Loading AU915 Configuration..."));
+    LMIC_selectSubBand(1); // Set to AU915 sub-band 2
   
 
 No puede compilar correctamente hasta que complete estas líneas:
@@ -134,9 +134,9 @@ Las  tres constantes una vez hechas deberían verse como en el siguiente ejemplo
 
 
 
-static const PROGMEM u1_t NWKSKEY[16] = { 0xD6, 0x6D, 0x3D, 0x6D, 0x03, 0xF5, 0x83, 0xB4, 0x11, 0x4A, 0x96, 0x9C, 0x85, 0x64, 0xCB, 0x90 };// matriz 16 bytes
-static const u1_t PROGMEM APPSKEY[16] = { 0xB6, 0x8A, 0x4D, 0xBC, 0xB6, 0x6E, 0xC1, 0xF7, 0x1F, 0x9A, 0x67, 0x13, 0x6C, 0xC0, 0x48, 0xB1 };// matriz 16 bytes
-static const u4_t DEVADDR = 0x260622C1;// un número de 4 bytes
+  static const PROGMEM u1_t NWKSKEY[16] = { 0xD6, 0x6D, 0x3D, 0x6D, 0x03, 0xF5, 0x83, 0xB4, 0x11, 0x4A, 0x96, 0x9C, 0x85, 0x64, 0xCB, 0x90 };// matriz 16 bytes
+  static const u1_t PROGMEM APPSKEY[16] = { 0xB6, 0x8A, 0x4D, 0xBC, 0xB6, 0x6E, 0xC1, 0xF7, 0x1F, 0x9A, 0x67, 0x13, 0x6C, 0xC0, 0x48, 0xB1 };// matriz 16 bytes
+  static const u4_t DEVADDR = 0x260622C1;// un número de 4 bytes
 
 
 
@@ -158,13 +158,13 @@ Es posible que haya notado en la ventana Datos de la aplicación que su carga ú
 
 Para escribir un propio decodificador. Necesitamos tomar los datos de bytes sin procesar y devolver una cadena que contenga todos los caracteres correspondientes a cada byte. Solución  posible :
  
-function Decoder(bytes, port) {
+  function Decoder(bytes, port) {
  
-    return {
-        ASCII: String.fromCharCode.apply(null, bytes)
-    };
+      return {
+          ASCII: String.fromCharCode.apply(null, bytes)
+      };
  
-}
+  }
 
 
 
