@@ -19,20 +19,21 @@ NOTA: La Secretaría de modernización de Argentina [https://www.argentina.gob.a
 
 
 A continuación se muestra el archivo de configuración: 
-// project-specific definitions
-//#define CFG_eu868 1
-//#define CFG_us915 1   
-#define CFG_au921  1
+
+ // project-specific definitions
+ //#define CFG_eu868 1
+ //#define CFG_us915 1   
+ #define CFG_au921  1
  
-//#define CFG_as923 1
-// #define LMIC_COUNTRY_CODE LMIC_COUNTRY_CODE_JP   /* for as923-JP */
-//#define CFG_in866 1
-#define CFG_sx1276_radio 1
+ //#define CFG_as923 1
+ // #define LMIC_COUNTRY_CODE LMIC_COUNTRY_CODE_JP   /* for as923-JP */
+ //#define CFG_in866 1
+ #define CFG_sx1276_radio 1
  
-//#define LMIC_PRINTF_TO Serial
-#define LMIC_DEBUG_LEVEL 2
+ //#define LMIC_PRINTF_TO Serial
+ #define LMIC_DEBUG_LEVEL 2
  
-//#define DISABLE_INVERT_IQ_ON_RX
+ //#define DISABLE_INVERT_IQ_ON_RX
  
 Si intenta utilizar el ejemplo "sin formato" en esta biblioteca, deberá descomentar DISABLE_INVERT_IQ_ON_RX; de lo contrario, manténgalo sin comentarios.
 
