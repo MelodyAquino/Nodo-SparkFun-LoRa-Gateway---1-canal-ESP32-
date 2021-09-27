@@ -179,10 +179,10 @@ Después de copiar el código anterior en su función de decodificador, desplác
 
 Solución de problemas:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Si los mensajes no llegan a su puerta de enlace, primero asegúrese de que el canal y el factor de propagación coincidan. Si no se modifica, el código de ejemplo del dispositivo debería enviar datos en el canal de 903,9 MHz con un factor de dispersión de 7 (suponiendo que haya configurado la biblioteca LMIC en CFG_us_915.
-Puede utilizar el servidor web de la puerta de enlace para ajustar esta configuración sobre la marcha.
-Tenga en cuenta que los números de canal deben coincidir secuencialmente con la freqsmatriz en loraModem.h , por ejemplo, el canal 0 debe ser 903.9MHz (nuevamente, asumiendo frecuencias estadounidenses).
-
+Si los mensajes no llegan a su puerta de enlace, primero asegúrese de que el canal y el factor de propagación coincidan. Si no se modifica, el código de ejemplo del dispositivo debería enviar datos en el canal de 903,9 MHz con un factor de dispersión de 7.
+Si se configura la biblioteca LMIC en CFG_us_915.
+Puede utilizar el servidor web de la puerta de enlace para ajustar la configuración de los canales sobre la marcha.
+Tenga en cuenta que los números de canal deben coincidir secuencialmente con la freqsmatriz en loraModem.h.
 Si los mensajes llegan a su puerta de enlace, pero no aparecen en la consola de su dispositivo TTN, considere cambiar la _TTNSERVERvariable en " ESP-sc-gway.h ". 
 utilizando  "router.au.thethings.network". 
 
